@@ -31,19 +31,19 @@ int isArmstrong(int x)
 		return 0;
 }
 
-int isPalindrom(int x){
-	
-		int n = x, reversed = 0;
+int isPalindrome(int n)
+{
+	int remainder = 0, reversed =0, original = n;
 	    while (n != 0) {
-        int remainder = n % 10;
+        remainder = n % 10;
         reversed = reversed * 10 + remainder;
         n /= 10;
-		}
-    // palindrome if orignal and reversed are equal
-    if (x == reversed)
-        printf("%d is a palindrome.", x);
-    else
-        printf("%d is not a palindrome.", x);
+    }
 
-    return 0;
+    // palindrome if orignal and reversed are equal
+    if (original == reversed)
+        return 1;
+    else
+        return 0;
+   
 }

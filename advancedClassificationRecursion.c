@@ -3,34 +3,46 @@
 #include <stdbool.h>
 #include<math.h>
 
-int check_ArmstrongNumber(int num)
-{
-     if(num>0)
-    return (pow(num%10,3) +check_ArmstrongNumber(num/10));
+int isPalindrome(int num){
+    if(num == reversed(num))
+    {
+        return 1;
+    }
+    return 0;
 }
 
-bool isPalRec(char str[],
-			int s, int e)
-{
-	if (s == e)
-	return true;
-
-	if (str[s] != str[e])
-	return false;
-
-	if (s < e + 1)
-	return isPalRec(str, s + 1, e - 1);
-
-	return true;
+int reversed(int num){
+    int remain;
+    int sum=0;
+    if(num!=0){
+            remain=num%10;
+            sum=sum*10+remain;
+            reversed(num/10);
+    }
+        else
+            return sum;
+    return sum;
 }
 
-bool isPalindrome(char str[])
-{
-int n = strlen(str);
+int isArmstrong(int num){
+    if (armstrongNumber(num, checkSize(num))==num)
+        return 1;
+        else return 0;
+}
 
+int checkSize(int num){
+    if(num>0){
+        return checkSize(num/10)+1;
+    }
+    else {
+        return 0;
+    }
+}
 
-if (n == 0)
-	return true;
-
-return isPalRec(str, 0, n - 1);
+int armstrongNumber(int num, int power){  
+    if(num>0){
+        return (pow(num%10,power) +armstrongNumber(num/10, power));
+     }else {
+         return 0;
+     }
 }
