@@ -11,7 +11,7 @@ loopd: basicClassification.c advancdClassifictionLoops.c
 	gcc -shared -o libclassloops.so basicClassification.c advancdClassifictionLoops.c 
 
 mains: main.c recursives
- [-f ./main ] && true || gcc -Wall main.c -l libclassrec.a
+	[-f ./main ] && true || gcc -Wall main.c -l libclassrec.a
 
 maindloop: main.c loopd
 	[-f ./myfile ] && true || gcc -Wall main.c -l libclassloops.so
