@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdbool.h>
+#include "NumClass.h"
 #include<math.h>
 
 int order(int x)

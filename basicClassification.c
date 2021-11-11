@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdbool.h>
 #include<math.h>
+#include "NumClass.h"
 
 int factorial(int r) {
    int fact = 1;
