@@ -1,14 +1,14 @@
 loops: basicClassification.c advancdClassifictionLoops.c
-	gcc -o libclassloops.a basicClassification.c advancdClassifictionLoops.c 
+	gcc -c basicClassification.c advancdClassifictionLoops.c  -o libclassloops.a
 
 recursives: basicClassification.c advancdClassifictionRecursion.c
-	gcc -o libclassrec.a basicClassification.c advancdClassifictionRecursion.c
+	gcc -c basicClassification.c advancdClassifictionRecursion.c -o libclassrec.a
 
 recursived: basicClassification.c advancdClassifictionRecursion.c
-	gcc -shared  -o libclassrec.so basicClassification.c advancdClassifictionRecursion.c
+	gcc -c -shared basicClassification.c advancdClassifictionRecursion.c -o libclassrec.so
 
 loopd: basicClassification.c advancdClassifictionLoops.c
-	gcc -shared -o libclassloops.so basicClassification.c advancdClassifictionLoops.c 
+	gcc -c -shared basicClassification.c advancdClassifictionLoops.c -o libclassloops.so
 
 mains: main.c recursives
 	[-f ./main ] && true || gcc -Wall main.c -l libclassrec.a
