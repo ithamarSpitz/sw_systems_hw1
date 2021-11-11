@@ -24,7 +24,7 @@ int isStrong(int n) {
       return 0;
 }
 
-int is_prime(int num)
+int isPrime(int num)
 {
      if (num <= 1) return 0;
      if (num % 2 == 0 && num > 2) return 0;
