@@ -8,10 +8,10 @@ loops: libclassloops.a
 looped: libclassloops.so
 recursives: libclassrec.a
 recursived: libclassrec.so
-libclassloops.a: advancedClassificationloop.o basicClassification.o
-	$(AR) -rcs libclassloops.a advancedClassificationloop.o basicClassification.o
-libclassloops.so: advancedClassificationloop.o basicClassification.o
-	$(CC) -shared -o libclassloops.so advancedClassificationloop.o basicClassification.o
+libclassloops.a: advancedClassificationLoop.o basicClassification.o
+	$(AR) -rcs libclassloops.a advancedClassificationLoop.o basicClassification.o
+libclassloops.so: advancedClassificationLoop.o basicClassification.o
+	$(CC) -shared -o libclassloops.so advancedClassificationLoop.o basicClassification.o
 libclassrec.a: advancedClassificationRecursion.o basicClassification.o
 	$(AR) -rcs libclassrec.a advancedClassificationRecursion.o basicClassification.o
 libclassrec.so: advancedClassificationRecursion.o basicClassification.o
@@ -19,8 +19,8 @@ libclassrec.so: advancedClassificationRecursion.o basicClassification.o
 
 basicClassification.o: basicClassification.c NumClass.h
 	$(CC) $(FLAGS) -c basicClassification.c
-advancedClassificationloop.o: advancedClassificationloop.c NumClass.h
-	$(CC) $(FLAGS) -c advancedClassificationloop.c -lm
+advancedClassificationloop.o: advancedClassificationLoop.c NumClass.h
+	$(CC) $(FLAGS) -c advancedClassificationLoop.c -lm
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c -lm
 main.o: main.c NumClass.h
