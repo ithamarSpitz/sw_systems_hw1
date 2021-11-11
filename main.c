@@ -11,28 +11,28 @@ int main()
     int temp = first;
     while(temp<=second){
         if(isPrime(temp)) {
-            printf("%d",temp);}
+            printf("%d ",temp);}
         temp++;
     }
     temp=first;
     printf("\n");
         while(temp<=second){
         if(isPalindrome(temp)) {
-            printf("%d",temp);}
+            printf("%d ",temp);}
         temp++;
     }
     temp=first;
     printf("\n");
     while(temp<=second){
         if(isStrong(temp)) {
-            printf("%d",temp);}
+            printf("%d ",temp);}
         temp++;
     }
     temp=first;
     printf("\n");
     while(temp<=second){
         if(isArmstrong(temp)) {
-            printf("%d",temp);}
+            printf("%d ",temp);}
         temp++;
     }
 
