@@ -15,8 +15,8 @@ int pali(int num){
     if(num<10)
         return 1;
     int size = checkSize(num);
-    if (num / pow(10, size-1) == num % 10)
-        return pali((num % pow(10, size-1)) / 10);
+    if (num / (int)pow(10, size-1) == num % 10)
+        return pali((num % (int)pow(10, size-1)) / 10);
     else
         return 0;
 
