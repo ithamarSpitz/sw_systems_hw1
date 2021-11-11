@@ -15,21 +15,21 @@ int main()
         temp++;
     }
     temp=first;
-    printf("/n");
+    printf("\n");
         while(temp<=second){
         if(isPalindrome(temp)) {
             printf("%d",temp);}
         temp++;
     }
     temp=first;
-    printf("/n");
+    printf("\n");
     while(temp<=second){
         if(isStrong(temp)) {
             printf("%d",temp);}
         temp++;
     }
     temp=first;
-    printf("/n");
+    printf("\n");
     while(temp<=second){
         if(isArmstrong(temp)) {
             printf("%d",temp);}
