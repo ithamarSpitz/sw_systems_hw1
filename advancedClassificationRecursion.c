@@ -2,14 +2,6 @@
 #include "NumClass.h"
 #include <math.h>
 
-int isPalindrome(int num){
-    if(num == reversed(num))
-    {
-        return 1;
-    }
-    return 0;
-}
-
 int reversed(int num){
     int remain;
     int sum=0;
@@ -21,6 +13,14 @@ int reversed(int num){
         else
             return sum;
     return sum;
+}
+
+int isPalindrome(int num){
+    if(num == reversed(num))
+    {
+        return 1;
+    }
+    return 0;
 }
 
 int isArmstrong(int num){
