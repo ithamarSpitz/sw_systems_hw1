@@ -1,6 +1,6 @@
 CC=gcc
 AR=ar
-OBJECTS_MAIN=main.o
+OBJECTS_MAIN=main.o 
 FLAGS= -Wall -g
 
 all: libclassloops.a libclassloops.so libclassrec.a libclassrec.so loops looped recursives recursived mains maindrec maindloop
@@ -24,7 +24,7 @@ advancedClassificationloop.o: advancedClassificationLoop.c NumClass.h
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c -lm
 main.o: main.c NumClass.h
-	$(CC) $(FLAGS) -c main.c
+	$(CC) $(FLAGS) -c main.c NumClass.h
 mains: $(OBJECTS_MAIN) libclassrec.a
 	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a -lm
 maindloop: $(OBJECTS_MAIN) libclassloops.so
