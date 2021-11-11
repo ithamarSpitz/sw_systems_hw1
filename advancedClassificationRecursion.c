@@ -23,12 +23,6 @@ int isPalindrome(int num){
     return 0;
 }
 
-int isArmstrong(int num){
-    if (armstrongNumber(num, checkSize(num))==num)
-        return 1;
-        else return 0;
-}
-
 int checkSize(int num){
     if(num>0){
         return checkSize(num/10)+1;
@@ -44,4 +38,10 @@ int armstrongNumber(int num, int power){
      }else {
          return 0;
      }
+}
+
+int isArmstrong(int num){
+    if (armstrongNumber(num, checkSize(num))==num)
+        return 1;
+        else return 0;
 }
