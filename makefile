@@ -24,7 +24,7 @@ advancedClassificationloop.o: advancedClassificationLoop.c NumClass.h
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c -lm
 main.o: main.c NumClass.h
-	$(CC) $(FLAGS) -c main.c NumClass.h
+	$(CC) $(FLAGS) -c main.c
 mains: $(OBJECTS_MAIN) libclassrec.a
 	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a -lm
 maindloop: $(OBJECTS_MAIN) libclassloops.so
