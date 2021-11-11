@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "NumClass.h"
+#include <NumClass.h>
 
 int main()
 {
